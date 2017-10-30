@@ -1,3 +1,23 @@
 body {
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+canvas {
+  flex: none;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.score, .best-score {
+  font-size: 40px;
+  margin: 0 20px;
 }

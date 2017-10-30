@@ -2,11 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
+    <section class="game-info">
+      <p class="score">
+        Score: <span id="score-number"></span>
+      </p>
+      <p class="best-score">
+        Best: <span id="best-score-number"></span>
+      </p>
+    </section>
+    <section id="game"></section>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/resources.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/player.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
 </body>

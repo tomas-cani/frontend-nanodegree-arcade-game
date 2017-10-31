@@ -87,8 +87,7 @@ var Engine = (function(global) {
     function checkCollisions() {
         allEnemies.forEach((enemy) => {
           if (enemy.y == player.y && Math.abs(enemy.x - player.x) < 75) {
-            setScore(0);
-            player.initialize();
+            reset();
           }
         })
     }
@@ -156,7 +155,7 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-      setScore(0);
+      initApp();
     }
 
     /* Go ahead and load all of the images we know we're going to need to

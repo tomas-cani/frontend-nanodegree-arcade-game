@@ -30,5 +30,5 @@ Enemy.prototype.render = function() {
 Enemy.prototype.initialize = function () {
   this.x = -171;
   this.y = config.enemyRows[getRandomInt(0, config.enemyRows.length - 1)] * 83 - 25;
-  this.speed = getRandomInt(1, 5) * 60;
+  this.speed = getRandomInt(1, 5) * speed;
 };

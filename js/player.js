@@ -34,11 +34,24 @@ Player.prototype.handleInput = function(key) {
 }
 
 Player.prototype.initialize = function () {
-  this.x = getRandomInt(1, config.numCols - 1) * 101;
-  this.y = 83 * (config.numRows - 1) - 25;
+  this.x = getRandomInt(1, config.numCols - 1) * 101; // Start at random position in row
+  this.y = 83 * (config.numRows - 1) - 25; // Start in last row
 };
 
 Player.prototype.reachWater = function () {
   this.initialize();
   setScore(++score);
 };
+
+// This listens for key presses and sends the keys to your
+// Player.handleInput() method. You don't need to modify this.
+document.addEventListener('keyup', function(e) {
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down'
+    };
+
+    player.handleInput(allowedKeys[e.keyCode]);
+});

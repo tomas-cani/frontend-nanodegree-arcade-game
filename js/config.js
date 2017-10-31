@@ -12,7 +12,12 @@ var rowImages = [
 ];
 
 var config = {
-  numEnemies: 8,
+  initialEnemies: 4,
+  maxEnemies: 16,
+  spawnRate: 1,
+  initialSpeed: 50,
+  maxSpeed: 200,
+  acceleration: 10,
   numRows: rowImages.length,
   numCols: 6,
   enemyRows: [1, 2, 4, 5] // rows that have enemies
